@@ -4,7 +4,7 @@
 set -e
 
 export PATH="$HOME/.local/share/omarchy/bin:$PATH"
-OMARCHY_INSTALL=~/.local/share/omarchy/install
+OMARCHY_INSTALL=~/omarchy/install
 
 # Give people a chance to retry running the installation
 catch_errors() {
