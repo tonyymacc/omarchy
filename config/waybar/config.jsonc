@@ -5,19 +5,14 @@
   "spacing": 0,
   "height": 26,
   "modules-left": [
-    "custom/omarchy",
     "hyprland/workspaces"
   ],
   "modules-center": [
-    "clock",
-    "custom/update"
+    "clock"
   ],
   "modules-right": [
-    "group/tray-expander",
-    "bluetooth",
     "network",
     "pulseaudio",
-    "cpu",
     "battery"
   ],
   "hyprland/workspaces": {
@@ -44,26 +39,9 @@
       "5": []
     }
   },
-  "custom/omarchy": {
-    "format": "",
-    "on-click": "omarchy-menu",
-    "tooltip-format": "Omarchy Menu\n\nSuper + Alt + Space"
-  },
-  "custom/update": {
-    "format": "",
-    "exec": "omarchy-update-available",
-    "on-click": "alacritty --class Omarchy --title Omarchy -e omarchy-update",
-    "tooltip-format": "Omarchy update available",
-    "interval": 3600
-  },
-  "cpu": {
-    "interval": 5,
-    "format": "󰍛",
-    "on-click": "alacritty -e btop"
-  },
   "clock": {
     "format": "{:%A %H:%M}",
-    "format-alt": "{:%d %B W%V %Y}",
+    "format-alt": "{:%d %B %Y}",
     "tooltip": false,
     "on-click-right": "omarchy-cmd-tzupdate"
   },
@@ -102,13 +80,6 @@
       "critical": 10
     }
   },
-  "bluetooth": {
-    "format": "",
-    "format-disabled": "󰂲",
-    "format-connected": "",
-    "tooltip-format": "Devices connected: {num_connections}",
-    "on-click": "blueberry"
-  },
   "pulseaudio": {
     "format": "{icon}",
     "on-click": "alacritty --class=Wiremix -e wiremix",
@@ -119,24 +90,5 @@
     "format-icons": {
       "default": ["", "", ""]
     }
-  },
-  "group/tray-expander": {
-    "orientation": "inherit",
-    "drawer": {
-      "transition-duration": 600,
-      "children-class": "tray-group-item"
-    },
-    "modules": [
-      "custom/expand-icon",
-    "tray"
-    ]
-  },
-  "custom/expand-icon": {
-    "format": " ",
-    "tooltip": false
-  },
-  "tray": {
-    "icon-size": 12,
-    "spacing": 12
   }
-}
+ }

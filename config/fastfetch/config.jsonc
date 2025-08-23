@@ -80,12 +80,6 @@
     },
     "break",
     {
-      "type": "command",
-      "key": "│ ├Ø",
-      "keyColor": "blue",
-      "text": "version=$(git -C ~/.local/share/omarchy describe --tags --abbrev=0 2>/dev/null); echo \"Omarchy $version\""
-    },
-    {
       "type": "de",
       "key": " DE",
       "keyColor": "blue"
@@ -103,16 +97,6 @@
     {
       "type": "icons",
       "key": "│ ├󰀻",
-      "keyColor": "blue"
-    },
-    {
-      "type": "cursor",
-      "key": "│ ├",
-      "keyColor": "blue"
-    },
-    {
-      "type": "terminalfont",
-      "key": "│ ├",
       "keyColor": "blue"
     },
     {
