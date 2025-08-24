@@ -9,12 +9,6 @@ cp ~/.local/share/omarchy/default/bashrc ~/.bashrc
 # Ensure application directory exists for update-desktop-database
 mkdir -p ~/.local/share/applications
 
-# If bare install, allow a way for its exclusions to not get added in updates
-if [ -n "$OMARCHY_BARE" ]; then
-  mkdir -p ~/.local/state/omarchy
-  touch ~/.local/state/omarchy/bare.mode
-fi
-
 # Setup GPG configuration with multiple keyservers for better reliability
 sudo mkdir -p /etc/gnupg
 sudo cp ~/.local/share/omarchy/default/gpg/dirmngr.conf /etc/gnupg/
@@ -41,12 +35,12 @@ git config --global pull.rebase true
 git config --global init.defaultBranch master
 
 # Set identification from install inputs
-if [[ -n "${OMARCHY_USER_NAME//[[:space:]]/}" ]]; then
-  git config --global user.name "$OMARCHY_USER_NAME"
+if [[ -n "${USER_NAME//[[:space:]]/}" ]]; then
+  git config --global user.name "$USER_NAME"
 fi
 
-if [[ -n "${OMARCHY_USER_EMAIL//[[:space:]]/}" ]]; then
-  git config --global user.email "$OMARCHY_USER_EMAIL"
+if [[ -n "${USER_EMAIL//[[:space:]]/}" ]]; then
+  git config --global user.email "$USER_EMAIL"
 fi
 
 # Set default XCompose that is triggered with CapsLock
@@ -54,6 +48,6 @@ tee ~/.XCompose >/dev/null <<EOF
 include "%H/.local/share/omarchy/default/xcompose"
 
 # Identification
-<Multi_key> <space> <n> : "$OMARCHY_USER_NAME"
-<Multi_key> <space> <e> : "$OMARCHY_USER_EMAIL"
+<Multi_key> <space> <n> : "$USER_NAME"
+<Multi_key> <space> <e> : "$USER_EMAIL"
 EOF
