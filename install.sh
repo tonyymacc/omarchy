@@ -4,7 +4,7 @@
 set -e
 
 export PATH="$HOME/.local/share/omarchy/bin:$PATH"
-OMARCHY_INSTALL=~/omarchy/install
+OMARCHY_INSTALL=~/.local/share/omarchy/install
 
 # Give people a chance to retry running the installation
 catch_errors() {
@@ -18,7 +18,7 @@ trap catch_errors ERR
 show_logo() {
   clear
   # tte -i ~/.local/share/omarchy/logo.txt --frame-rate ${2:-120} ${1:-expand}
-  cat <~//omarchy/logo.txt
+  cat <~/.local/share/omarchy/logo.txt
   echo
 }
 
