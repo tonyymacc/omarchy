@@ -8,9 +8,7 @@ OMARCHY_INSTALL=~/.local/share/omarchy/install
 
 # Give people a chance to retry running the installation
 catch_errors() {
-  echo -e "\n\e[31mOmarchy installation failed!\e[0m"
-  echo "You can retry by running: bash ~/.local/share/omarchy/install.sh"
-  echo "Get help from the community: https://discord.gg/tXFUdasqhY"
+  echo -e "\n\e[31mInstallation failed!\e[0m"
 }
 
 trap catch_errors ERR
@@ -31,7 +29,7 @@ show_subtext() {
 source $OMARCHY_INSTALL/preflight/guard.sh
 source $OMARCHY_INSTALL/preflight/aur.sh
 source $OMARCHY_INSTALL/preflight/presentation.sh
-source $OMARCHY_INSTALL/preflight/migrations.sh
+#source $OMARCHY_INSTALL/preflight/migrations.sh
 
 # Configuration
 show_logo beams 240
@@ -39,7 +37,7 @@ show_subtext "Let's install Omarchy! [1/5]"
 source $OMARCHY_INSTALL/config/identification.sh
 source $OMARCHY_INSTALL/config/config.sh
 source $OMARCHY_INSTALL/config/detect-keyboard-layout.sh
-source $OMARCHY_INSTALL/config/fix-fkeys.sh
+#source $OMARCHY_INSTALL/config/fix-fkeys.sh
 source $OMARCHY_INSTALL/config/network.sh
 source $OMARCHY_INSTALL/config/power.sh
 source $OMARCHY_INSTALL/config/timezones.sh
@@ -65,7 +63,7 @@ source $OMARCHY_INSTALL/desktop/theme.sh
 source $OMARCHY_INSTALL/desktop/bluetooth.sh
 #source $OMARCHY_INSTALL/desktop/asdcontrol.sh
 source $OMARCHY_INSTALL/desktop/fonts.sh
-source $OMARCHY_INSTALL/desktop/printer.sh
+#source $OMARCHY_INSTALL/desktop/printer.sh
 
 # Apps
 show_logo expand
