@@ -12,7 +12,7 @@ fi
 
 # Allow icons to match the theme
 if ! yay -Q yaru-icon-theme &>/dev/null; then
-  yay -S --noconfirm yaru-icon-theme
+  yay -S --needed yaru-icon-theme
 fi
 
 gsettings set org.gnome.desktop.interface gtk-theme "Adwaita-dark"
